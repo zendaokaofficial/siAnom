@@ -60,8 +60,8 @@ if FirstFilter != "Pilih Kategori" and SecondFilter != "Pilih Anomali":
     n1 = len(df3['Sudah Diperbaiki'])
     n2 = len(df3['Sudah di entry'])
 
-    m1 = int(round(p1/n1 * 100, 2))
-    m2 = int(round(p2/n2 * 100, 2))
+    m1 = (round(p1/n1 * 100, 2))
+    m2 = (round(p2/n2 * 100, 2))
 
     col1.metric(label = "Persentase Sudah Diperbaiki", value = f"{str(m1)} %")
     col2.metric(label = "Persentase Sudah Dientry", value = f"{str(m2)} %")
