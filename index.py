@@ -60,17 +60,14 @@ if FirstFilter != "Pilih Kategori" and SecondFilter != "Pilih Anomali":
     n1 = len(df3['Sudah Diperbaiki'])
     n2 = len(df3['Sudah di entry'])
 
-    col1.metric(label = "Persentase Sudah Diperbaiki", value = f"{round(p1/n1 * 100, 2)} %")
-    col2.metric(label = "Persentase Sudah Dientry", value = f"{round(p2/n2 * 100, 2)} %")
+    m1 = int(round(p1/n1 * 100, 2))
+    m2 = int(round(p2/n2 * 100, 2))
+
+    col1.metric(label = "Persentase Sudah Diperbaiki", value = f"{str(m1)} %")
+    col2.metric(label = "Persentase Sudah Dientry", value = f"{str(m2)} %")
     style_metric_cards(border_left_color = '#1E1E1E')
     
     if len(columns) > 0:
 
         st.checkbox("Use container width", value=False, key="use_container_width")
         st.dataframe(df4, use_container_width=st.session_state.use_container_width)
-        
-
-## Untuk Tampilan Tabel
-# df = pd.read_csv(url_1, on_bad_lines='skip')
-# df.iloc[:,:-3] = df.iloc[:,:-3].applymap(str)
-# df
