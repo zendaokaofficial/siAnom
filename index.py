@@ -69,7 +69,7 @@ with st.sidebar:
 
 if FirstFilter == "Pilih Kategori":
     st.title("Selamat Datang di SiAnom")
-    st.text("SiAnom memberikan informasi mengenai Anomali ST2023 di BPS Kabupaten Tabanan. Untuk melihat Summary tiap-tiap subsektor silahkan pilih Subsektor pada sidebar di sebelah kiri")
+    st.write("""SiAnom memberikan informasi mengenai Anomali ST2023 di BPS Kabupaten Tabanan. Untuk melihat Summary tiap-tiap subsektor silahkan pilih Subsektor pada sidebar di sebelah kiri""")
 elif FirstFilter != "Pilih Kategori" and SecondFilter == "Pilih Anomali":
     show(sheet_url, FirstFilter)
 
